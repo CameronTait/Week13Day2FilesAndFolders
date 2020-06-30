@@ -17,15 +17,14 @@ public class File {
     @Column(name = "name")
     private String name;
 
-    @Column(extension = "extension")
+    @Column(name= "extension")
     private String extension;
 
-    @Column(size = "size")
+    @Column(name = "size")
     private String size;
 
-
     @ManyToOne
-    @JoinColumn ( name = "folder_id", nullable = false)
+    @JoinColumn( name = "folder_id", nullable = false)
     private Folder folder;
 
     public File(String name, String extension, String size, Folder folder) {
@@ -37,7 +36,6 @@ public class File {
 
     public File() {
     }
-
 
 
     public Long getId() {
@@ -72,11 +70,11 @@ public class File {
         this.size = size;
     }
 
-    public String getFolder() {
+    public Folder getFolder() {
         return folder;
     }
 
-    public void setFolder(String folder) {
+    public void setFolder(Folder folder) {
         this.folder = folder;
     }
 }
@@ -84,5 +82,5 @@ public class File {
 
 
 
-}
+
 

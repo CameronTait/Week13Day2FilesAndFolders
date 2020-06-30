@@ -22,7 +22,7 @@ public class User {
     )
     private List<Folder> folders;
 
-    public User(String name, Long id) {
+    public User(String name) {
         this.name = name;
         this.folders = new ArrayList<Folder>();
     }
@@ -53,5 +53,9 @@ public class User {
 
     public void setFolders(List<Folder> folders) {
         this.folders = folders;
+    }
+
+    public void addFolders(Folder folder){
+        this.folders.add(folder);
     }
 }
